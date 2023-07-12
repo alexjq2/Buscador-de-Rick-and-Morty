@@ -22,17 +22,20 @@
     background-position: center;
     width: 100%;
     height: 893px;
+    flex-grow: 1;
+    position: relative;
 }
+
 .banner img {
     margin-top: 70px;
     margin-left: 50px;
 }
 /* app container */
-.app-container {
- 
-
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
 /* Location */
 .section-container {
     height: 400px;
@@ -91,20 +94,16 @@
 
 /* residents */
 .resident-info {
-    background-color: #FFEF66;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
-    margin-left: 2rem;
+    flex-shrink: 0;
+    background-color: #000000;
 }
-.resident-info {
-}
-
 .card-info {
     margin: 9px;
-    background-color: blue;
     width: 350px;
     height: 400px;
     display: flex;
@@ -112,13 +111,14 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    flex-shrink: 6;
 }
 .card-info img {
     border-radius: 50%;
     border: 4px solid var(--Violet);
     height: 200px;
     position: absolute;
-    top: -50px;
+    top: -40px;
     left: 30px;
     z-index: 1;
 }
@@ -135,13 +135,19 @@
 }
 .card-info-data h2 {
     background-color: var(--Gray23);
-    width: 100%;
-    height:  60px;
     border-radius: 23px;
     color: var(--Violet);
-    
+    width: 100%;
+    height:  60px;
+    display: flex;
+    justify-content: center;
+    align-items: self-end;
 }
-
+.card-info-data p {
+    margin-top: 14px;
+    font-size: 17px;
+    color: var(--Violet);
+}
 
 
 /* footer */
@@ -152,6 +158,7 @@
     background-position: center;
     width: 100%;
     height: 1158px;
+    flex-shrink: 0;
 }
 
 

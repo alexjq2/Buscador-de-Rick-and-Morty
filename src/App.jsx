@@ -9,7 +9,6 @@ function App() {
         <img src={logo} alt="" />
         <Location/>
       </div>
-      <div className='footer'/>
     </section>
   )
 }
